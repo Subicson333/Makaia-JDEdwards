@@ -17,6 +17,11 @@ public class LoginPage extends SeleniumBase {
         reportStep("Password Entered", "pass");
         return this;
     }
+    public HomePage clickSignIn() {
+        click(locateElement(Locators.XPATH,"//input[@value='Sign In']"));
+        reportStep("SignIn clicked", "pass");
+        return new HomePage(); 
+    }
 
     
     
