@@ -37,12 +37,6 @@ public class HomePage extends ProjectSpecificMethods {
 	        return this;
 	    }
 
-	    public HomePage clickOrderManagement() {
-	        click(locateElement(Locators.XPATH, "//span[text()='Order Management']"));
-	        reportStep("Clicked OrderManagement", "pass");
-	        return this;
-	    }
-
 	    // 4. Click Inventory Management
 	    public HomePage clickInventoryManagement() {
 	        click(locateElement(Locators.XPATH, "//span[text()='Inventory Management']"));
@@ -50,25 +44,11 @@ public class HomePage extends ProjectSpecificMethods {
 	        return this;
 	    }
 	    
-	    public HomePage clickSalesOrderManagement() {
-	    	pause(1000);
-	        click(locateElement(Locators.XPATH, "//span[text()='Sales Order Management']"));
-	        reportStep("Clicked sales order management", "pass");
-	        return this;
-	    }
-
 	    // 5. Click Daily Processing
 	    public HomePage clickDailyProcessing() {
 	    	
 	        click(locateElement(Locators.XPATH, "//span[text()='Daily Processing']"));
 	        reportStep("Clicked Daily Processing", "pass");
-	        return this;
-	    }
-	    
-	    public HomePage clickDailySalesProcessing() {
-	    	pause(2000);
-	        click(locateElement(Locators.XPATH, "//span[text()='Daily Sales Order Management Processing']"));
-	        reportStep("Clicked daily Sales Processing", "pass");
 	        return this;
 	    }
 	    
@@ -84,28 +64,7 @@ public class HomePage extends ProjectSpecificMethods {
 	        return new InquiriesPage();
 	    }
 	    
-	    public HomePage clickOrderProcessing() {
-	    	pause(1000);
-	        click(locateElement(Locators.XPATH, "//span[text()='Sales Order Processing']"));
-	        reportStep("Order processing clicked", "pass");
-	        return this;
-	    }
-	    
-	    public 	OrderHeaderPage clickOrderHeader() {
-	    	pause(1000);
-	        click(locateElement(Locators.XPATH, "//a[text()='Enter Orders Header']"));
-	        reportStep("ClickOrder Header", "pass");
-	        return new OrderHeaderPage();
-	    }
-	    
-	    public 	PickSlipPage clickPickSlip() {
-	    	pause(1000);
-	        click(locateElement(Locators.XPATH, "//a[text()='Print Pick Slips']"));
-	        reportStep("Clicked in Pick Slip", "pass");
-	        return new PickSlipPage();
-	    }
 	 
 	 
 	
 }
-

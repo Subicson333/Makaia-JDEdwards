@@ -18,6 +18,11 @@ public class LoginPage extends SeleniumBase {
         return this;
     }
 
-    
+    public HomePage clickSignIn() {
+        click(locateElement(Locators.XPATH,
+                "//button[normalize-space()='Sign In' or normalize-space()='Sign in'] | //input[@value='Sign In']"));
+        reportStep("Sign in clicked", "pass");
+        return new HomePage();
+    }
     
 }
