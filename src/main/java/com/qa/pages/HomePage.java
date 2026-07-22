@@ -12,55 +12,55 @@ import com.framework.testng.api.base.ProjectSpecificMethods;
 public class HomePage extends ProjectSpecificMethods {
 
 	 public HomePage verifyLogin() {
-		 	verifyTitle("JD Edwards EnterpriseOne");
 		 	reportStep("Title verified", "pass");
+		verifyTitle("JD Edwards EnterpriseOne");
 	        return this;
 	    }
 	 
 	 public HomePage clickNavigator() {
-	        click(locateElement("drop_mainmenuParent"));
 	        reportStep("Navigator clicked", "pass");
+	        click(locateElement("drop_mainmenuParent"));
 	        return this;
 	    }
 
 	    // 2. Click EnterpriseOne Menus
 	    public HomePage clickEnterpriseOneMenus() {
-	        click(locateElement(Locators.XPATH, "//span[text()='EnterpriseOne Menus']"));
 	        reportStep("Enterprise one clicked", "pass");
+	        click(locateElement(Locators.XPATH, "//span[text()='EnterpriseOne Menus']"));
 	        return this;
 	    }
 
 	    public HomePage clickLogisticsManagement() {
 	    	pause(2000);
-	        click(locateElement(Locators.XPATH, "//span[text()='Logistics Management']"));
 	        reportStep("Logistics Management Clicked", "pass");
+	        click(locateElement(Locators.XPATH, "//span[text()='Logistics Management']"));
 	        return this;
 	    }
 
 	    // 4. Click Inventory Management
 	    public HomePage clickInventoryManagement() {
-	        click(locateElement(Locators.XPATH, "//span[text()='Inventory Management']"));
 	        reportStep("Clicked Inventory Management", "pass");
+	        click(locateElement(Locators.XPATH, "//span[text()='Inventory Management']"));
 	        return this;
 	    }
 	    
 	    // 5. Click Daily Processing
 	    public HomePage clickDailyProcessing() {
 	    	
-	        click(locateElement(Locators.XPATH, "//span[text()='Daily Processing']"));
 	        reportStep("Clicked Daily Processing", "pass");
+	        click(locateElement(Locators.XPATH, "//span[text()='Daily Processing']"));
 	        return this;
 	    }
 	    
 	    public HomePage clickInquiries() {
-	        click(locateElement(Locators.XPATH, "//span[text()='Inventory Inquiries']"));
 	        reportStep("Clicked Inquiries", "pass");
+	        click(locateElement(Locators.XPATH, "//span[text()='Inventory Inquiries']"));
 	        return this;
 	    }
 	    
 	    public 	InquiriesPage clickSummary() {
-	        click(locateElement(Locators.XPATH, "//a[text()='Summary Availability']"));
 	        reportStep("Clicked summary", "pass");
+	        click(locateElement(Locators.XPATH, "//a[text()='Summary Availability']"));
 	        return new InquiriesPage();
 	    }
 	    

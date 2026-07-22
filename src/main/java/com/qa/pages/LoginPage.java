@@ -7,21 +7,21 @@ import com.framework.testng.api.base.ProjectSpecificMethods;
 public class LoginPage extends SeleniumBase {
 
     public LoginPage enterUsername(String username) {
-        clearAndType(locateElement("User"), username);
         reportStep("User name entered", "pass");
+        clearAndType(locateElement("User"), username);
         return this;
     }
 
     public LoginPage enterPassword(String password) {
-        clearAndType(locateElement("Password"), password);
         reportStep("Password Entered", "pass");
+        clearAndType(locateElement("Password"), password);
         return this;
     }
 
     public HomePage clickSignIn() {
+        reportStep("Sign in clicked", "pass");
         click(locateElement(Locators.XPATH,
                 "//button[normalize-space()='Sign In' or normalize-space()='Sign in'] | //input[@value='Sign In']"));
-        reportStep("Sign in clicked", "pass");
         return new HomePage();
     }
     
