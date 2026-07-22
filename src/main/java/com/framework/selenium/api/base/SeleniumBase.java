@@ -337,6 +337,11 @@ public class SeleniumBase extends Reporter implements Browser, Element  {
 
 	}
 
+	@Override
+	public void clearAndType(Locators locatorType, String value, String data) {
+		clearAndType(locateElement(locatorType, value), data);
+	}
+
 	public void typeAndTab(WebElement ele, String data) {
 		try {
 			getWait().until(ExpectedConditions.visibilityOf(ele));

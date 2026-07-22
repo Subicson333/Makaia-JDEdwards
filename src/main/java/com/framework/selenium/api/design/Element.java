@@ -44,6 +44,15 @@ public interface Element {
 	 * @throws ElementNotInteractable,IllegalArgumentException(throws if keysToSend is null)		 
 	 */
 	 void clearAndType(WebElement ele,String data);
+
+	/**
+	 * This method will locate, clear, and type in the given text field.
+	 *
+	 * @param locatorType - The locator strategy for the text field
+	 * @param value       - The locator value for the text field
+	 * @param data        - The data to be entered
+	 */
+	 void clearAndType(Locators locatorType, String value, String data);
 	
 	/**
 	 * This method will get the visible text of the element
@@ -169,7 +178,5 @@ public interface Element {
 	 boolean verifySelected(WebElement ele);
 	
 }
-
-
 
 
